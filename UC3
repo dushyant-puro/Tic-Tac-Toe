@@ -1,23 +1,22 @@
-#include <iostream>
-using namespace std;
+import java.util.Scanner;
 
-int getSlotInput()
-{
-    int slot;
+public class UserInput {
 
-    cout << "Enter slot number (1-9): ";
-    cin >> slot;
+    static int getSlotInput() {
 
-    return slot;
-}
+        Scanner sc = new Scanner(System.in);
 
-int main()
-{
-    int selectedSlot;
+        System.out.print("Enter slot number (1-9): ");
 
-    selectedSlot = getSlotInput();
+        int slot = sc.nextInt();
 
-    cout << "You selected slot: " << selectedSlot << endl;
+        return slot;
+    }
 
-    return 0;
+    public static void main(String[] args) {
+
+        int selectedSlot;
+        selectedSlot = getSlotInput();
+        System.out.println("You selected slot: " + selectedSlot);
+    }
 }
