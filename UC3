@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int getSlotInput()
+{
+    int slot;
+
+    cout << "Enter slot number (1-9): ";
+    cin >> slot;
+
+    return slot;
+}
+
+int main()
+{
+    int selectedSlot;
+
+    selectedSlot = getSlotInput();
+
+    cout << "You selected slot: " << selectedSlot << endl;
+
+    return 0;
+}
