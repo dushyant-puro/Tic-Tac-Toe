@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    string player1 = "Player 1";
+    string player2 = "Player 2";
+
+    char symbol1, symbol2;
+    string currentPlayer;
+
+    srand(time(0));
+
+
+    int toss = rand() % 2;
+
+
+    if(toss == 0)
+    {
+        currentPlayer = player1;
+        symbol1 = 'X';
+        symbol2 = 'O';
+
+        cout << player1 << " won the toss and will start first.\n";
+    }
+    else
+    {
+        currentPlayer = player2;
+        symbol1 = 'O';
+        symbol2 = 'X';
+
+        cout << player2 << " won the toss and will start first.\n";
+    }
+
+
+    cout << player1 << " Symbol: " << symbol1 << endl;
+    cout << player2 << " Symbol: " << symbol2 << endl;
+
+
+    cout << "Current Player: " << currentPlayer << endl;
+
+    return 0;
+}
