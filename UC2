@@ -1,46 +1,36 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+import java.util.Random;
 
-using namespace std;
+public class TossGame {
 
-int main()
-{
-    string player1 = "Player 1";
-    string player2 = "Player 2";
+    public static void main(String[] args) {
 
-    char symbol1, symbol2;
-    string currentPlayer;
+        String player1 = "Player 1";
+        String player2 = "Player 2";
 
-    srand(time(0));
+        char symbol1, symbol2;
+        String currentPlayer;
+        Random random = new Random();
+        int toss = random.nextInt(2);
+        if(toss == 0) {
 
+            currentPlayer = player1;
 
-    int toss = rand() % 2;
+            symbol1 = 'X';
+            symbol2 = 'O';
 
+            System.out.println(player1 + " won the toss and will start first.");
 
-    if(toss == 0)
-    {
-        currentPlayer = player1;
-        symbol1 = 'X';
-        symbol2 = 'O';
+        } else {
 
-        cout << player1 << " won the toss and will start first.\n";
+            currentPlayer = player2;
+
+            symbol1 = 'O';
+            symbol2 = 'X';
+
+            System.out.println(player2 + " won the toss and will start first.");
+        }
+        System.out.println(player1 + " Symbol: " + symbol1);
+        System.out.println(player2 + " Symbol: " + symbol2);
+        System.out.println("Current Player: " + currentPlayer);
     }
-    else
-    {
-        currentPlayer = player2;
-        symbol1 = 'O';
-        symbol2 = 'X';
-
-        cout << player2 << " won the toss and will start first.\n";
-    }
-
-
-    cout << player1 << " Symbol: " << symbol1 << endl;
-    cout << player2 << " Symbol: " << symbol2 << endl;
-
-
-    cout << "Current Player: " << currentPlayer << endl;
-
-    return 0;
 }
