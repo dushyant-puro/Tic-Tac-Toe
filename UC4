@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SlotToIndexConversion {
+    static void convertSlotToIndex(int slot) {
+        int row = (slot - 1) / 3;
+        int col = (slot - 1) % 3;
+        System.out.println("Row Index: " + row);
+        System.out.println("Column Index: " + col);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter slot number (1-9): ");
+
+        int slot = sc.nextInt();
+
+        convertSlotToIndex(slot);
+
+        sc.close();
+    }
+}
